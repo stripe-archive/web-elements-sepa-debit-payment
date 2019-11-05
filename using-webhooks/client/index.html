@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stripe SEPA Debit sample</title>
+    <meta name="description" content="A demo of Stripe Payment Intents" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="sr-root">
+      <div class="sr-main">
+        <form id="payment-form" class="sr-payment-form">
+          <div class="sr-combo-inputs-row">
+            <div class="col">
+              <label for="name">
+                Name
+              </label>
+              <input id="name" name="name" placeholder="Jenny Rosen" required />
+            </div>
+            <div class="col">
+              <label for="email">
+                Email Address
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="jenny.rosen@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="sr-combo-inputs-row">
+            <div class="col">
+              <label for="iban-element">
+                IBAN
+              </label>
+              <div id="iban-element">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Used to display form errors. -->
+          <div id="error-message" class="sr-field-error" role="alert"></div>
+
+          <!-- Display mandate acceptance text. -->
+          <div class="col" id="mandate-acceptance">
+            By providing your IBAN and confirming this payment, you are
+            authorizing Rocketship Inc. and Stripe, our payment service
+            provider, to send instructions to your bank to debit your account
+            and your bank to debit your account in accordance with those
+            instructions. You are entitled to a refund from your bank under the
+            terms and conditions of your agreement with your bank. A refund must
+            be claimed within 8 weeks starting from the date on which your
+            account was debited.
+          </div>
+
+          <button id="confirm-mandate">
+            <div disabled class="spinner hidden" id="spinner"></div>
+            <span id="button-text"
+              >Confirm mandate and initiate debit for
+              <span id="order-amount"></span
+            ></span>
+          </button>
+        </form>
+        <div class="sr-result hidden">
+          <p>Payment processing<br /></p>
+          <pre>
+            <code></code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
