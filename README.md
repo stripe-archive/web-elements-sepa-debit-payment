@@ -6,7 +6,7 @@ During the payment process, [a PaymentIntent object is created](https://stripe.c
 
 ## Demo
 
-<!-- See a [hosted version]() of the sample or fork a copy on [codesandbox.io](). TODO -->
+See a [hosted version](https://qry5s.sse.codesandbox.io) of the sample or fork a copy on [codesandbox.io](https://codesandbox.io/s/stripe-sample-web-elements-sepa-debit-payment-qry5s).
 
 All the samples run in test mode -- use `DE89370400440532013000` for testing successful debits.
 
@@ -22,7 +22,7 @@ You will need to handle asynchronous events in order to be notified when the pay
 | This sample shows: | Using webhooks | 
 :--- | :---: 
 📝 **Formatting and validating customer IBANs** using the [Stripe IBAN Element](https://stripe.com/docs/stripe-js/elements/iban). | ✅ |
-🙅 **Automatically generating recurring SEPA Debit mandates** for [future usage](https://stripe.com/docs/payments/sepa-debit-setup-intents) of SEPA Debit payment methods for example with [Stripe Billing](https://stripe.com/docs/billing/subscriptions/set-up-subscription).  | ✅ |
+🧾 **Automatically generating recurring SEPA Debit mandates** for [future usage](https://stripe.com/docs/payments/sepa-debit-setup-intents) of SEPA Debit payment methods for example with [Stripe Billing](https://stripe.com/docs/billing/subscriptions/set-up-subscription).  | ✅ |
 ↪️ **Using webhooks to verify the payment outcome.** You will need to handle asynchronous events in order to be notified when the payment is successful or has failed. | ✅ |
 🏦 **Easily scalable to other payment methods.** Webhooks enable easy adoption of other asynchroneous payment methods like direct debits and push-based payment flows. | ✅ |
 
