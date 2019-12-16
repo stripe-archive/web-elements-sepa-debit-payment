@@ -59,7 +59,7 @@ git clone https://github.com/stripe-samples/web-elements-sepa-debit-payment
 Copy the .env.example file into a file named .env in the folder of the server you want to use. For example:
 
 ```
-cp .env.example using-webhooks/server/node/.env
+cp .env.example server/node/.env
 ```
 
 You will need a Stripe account in order to run the demo. Once you set up your account, go to the Stripe [developer dashboard](https://stripe.com/docs/development#api-keys) to find your API keys.
@@ -112,3 +112,4 @@ A: We are always looking for new sample ideas, please email dev-samples@stripe.c
 ## Author(s)
 
 [@thorsten-stripe](https://twitter.com/thorwebdev)
+[@csabol-stripe](https://github.com/csabol-stripe)
