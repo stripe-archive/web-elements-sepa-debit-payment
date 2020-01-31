@@ -3,7 +3,7 @@
   "configureDotEnv": true,
   "integrations": [
     {
-      "name": "using-webhooks",
+      "name": "main",
       "clients": ["web"],
       "servers": ["java", "node", "php-slim", "python", "ruby"]
     }
