@@ -46,6 +46,11 @@ var createPaymentIntent = function() {
       var form = document.getElementById("payment-form");
       form.addEventListener("submit", function(event) {
         event.preventDefault();
+        // Validate the form input
+        if (!event.target.reportValidity()) {
+          // Form not valid, abort!
+          return;
+        }
         // Initiate payment when the submit button is clicked
         pay(stripe, iban, clientSecret);
       });
@@ -94,13 +99,11 @@ var setupElements = function(data) {
     // Handle real-time validation errors from the iban Element.
     if (event.error) {
       showError(event.error.message);
-    } else if (event.complete) {
-      // Enable button.
-      document.querySelector("button").disabled = false;
-    } else {
-      document.querySelector("button").disabled = true;
     }
   });
+
+  // Enable button.
+  document.querySelector("button").disabled = false;
 
   return {
     stripe: stripe,
@@ -172,7 +175,7 @@ var changeLoadingState = function(isLoading) {
     document.querySelector("#spinner").classList.remove("hidden");
     document.querySelector("#button-text").classList.add("hidden");
   } else {
-    document.querySelector("button").disabled = true;
+    document.querySelector("button").disabled = false;
     document.querySelector("#spinner").classList.add("hidden");
     document.querySelector("#button-text").classList.remove("hidden");
   }
