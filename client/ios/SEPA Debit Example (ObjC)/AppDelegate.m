@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <Stripe/Stripe.h>
+@import Stripe;
 
 #import "CheckoutViewController.h"
 
@@ -28,7 +28,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    BOOL stripeHandled = [Stripe handleStripeURLCallbackWithURL:url];
+    BOOL stripeHandled = [StripeAPI handleStripeURLCallbackWithURL:url];
     if (stripeHandled) {
         return YES;
     }
