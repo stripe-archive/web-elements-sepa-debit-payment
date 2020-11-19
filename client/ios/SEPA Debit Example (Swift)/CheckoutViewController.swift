@@ -151,7 +151,7 @@ class CheckoutViewController: UIViewController {
             }
             self?.paymentIntentClientSecret = clientSecret
             // Configure the SDK with your Stripe publishable key so that it can make requests to the Stripe API
-            Stripe.setDefaultPublishableKey(stripePublishableKey)
+            StripeAPI.defaultPublishableKey = stripePublishableKey
         })
         task.resume()
     }
@@ -178,8 +178,8 @@ class CheckoutViewController: UIViewController {
                                                                          metadata: nil)
         paymentIntentParams.returnURL = "sepa-debit-example://stripe-redirect"
 
-        STPPaymentHandler.shared().confirmPayment(withParams: paymentIntentParams,
-                                                  authenticationContext: self)
+        STPPaymentHandler.shared().confirmPayment(paymentIntentParams,
+                                                with: self)
         { (handlerStatus, paymentIntent, error) in
             switch handlerStatus {
             case .succeeded:
