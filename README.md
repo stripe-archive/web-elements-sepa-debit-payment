@@ -1,3 +1,7 @@
+<table><tbody><tr><td valign="center"><img src="https://lh3.googleusercontent.com/kWMH3aQzcvLmucr5wIL-2BlmiFDgQgiB-fCS6J2Du7H-T1zL3rWP7JU2Om81dIkStE3mP6cLYt1fhCCIPHY6RYMpUg7oRphN11bCz--0Mv4PrsrhfrmdMurdt2XeEYbUKvqYnrj-" align="left" width="250"></td><td valign="center"> This project is deprecated and is no longer being actively being actively maintained. </td></tr></tbody></table>
+
+Please see the [Accept a payment](https://github.com/stripe-samples/accept-a-payment) sample showing how to implement SEPA Debit with Elements and more.
+
 # Collecting a SEPA Debit mandate and payment
 
 Stripe users in Europe and the United States can use the [IBAN Element](https://stripe.com/docs/stripe-js/elements/iban) and PaymentIntents to accept [SEPA Direct Debit payments](https://stripe.com/docs/payments/sepa-debit) from customers within the [Single Euro Payments Area](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area).
