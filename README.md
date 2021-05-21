@@ -1,6 +1,8 @@
-<table><tbody><tr><td valign="center"><img src="https://lh3.googleusercontent.com/kWMH3aQzcvLmucr5wIL-2BlmiFDgQgiB-fCS6J2Du7H-T1zL3rWP7JU2Om81dIkStE3mP6cLYt1fhCCIPHY6RYMpUg7oRphN11bCz--0Mv4PrsrhfrmdMurdt2XeEYbUKvqYnrj-" align="left" width="250"></td><td valign="center"> This project is deprecated and is no longer being actively being actively maintained. </td></tr></tbody></table>
-
-Please see the [Accept a payment](https://github.com/stripe-samples/accept-a-payment) sample showing how to implement SEPA Debit with Elements and more.
+> <img src="https://stripe.dev/images/badges/archived.png" width="250">
+>
+> This project is deprecated and is no longer being actively maintained.
+>
+> Please see the [Accept a payment](https://github.com/stripe-samples/accept-a-payment) sample showing how to implement SEPA Debit with Elements and more.
 
 # Collecting a SEPA Debit mandate and payment
 
